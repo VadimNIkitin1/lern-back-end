@@ -1,5 +1,6 @@
 import express from 'express'
 import authRoutes from './app/auth/auth.routes.js'
+import userRoutes from './app/user/user.routes.js'
 import dotenv from 'dotenv'
 import morgan from 'morgan'
 import 'colors'
@@ -19,6 +20,7 @@ async function main() {
 
 	app.use(express.json())
 	app.use('/api/auth', authRoutes)
+	app.use('/api/users', userRoutes)
 
 	app.use(notFound)
 	app.use(errorHandler)
