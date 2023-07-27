@@ -6,6 +6,7 @@ import workoutRoutes from './app/workout/workout.routes.js'
 import dotenv from 'dotenv'
 import morgan from 'morgan'
 import path from 'path'
+import cors from 'cors'
 import 'colors'
 import { prisma } from './app/prisma.js'
 import { errorHandler, notFound } from './app/middleware/error.middleware.js'
@@ -21,6 +22,7 @@ async function main() {
 		app.use(morgan('dev'))
 	}
 
+	app.use(cors())
 	app.use(express.json())
 
 	// для создания статичной папки для получения картинок
