@@ -13,5 +13,9 @@
 		"^./(.*)"
 	],
 	"importOrderSeparation": true,
-	"importOrderSortSpecifiers": true
+	"importOrderSortSpecifiers": true,
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"editor.formatOnSave": true
 }
